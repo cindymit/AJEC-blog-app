@@ -1,18 +1,14 @@
-import { useState } from "react";
-import * as controller from "../../services/posts.js";
+import { useEffect, useState } from "react";
+import { getPosts } from "../../services/posts.js";
 
-function Post(props) {
-  const post = controller.getProducts.map((post) => {
-    return (
-      <div>
-        <h2>{post.title}</h2>
-        <h4>{post.username}</h4>
-        <p>{post.content}</p>
-      </div>
-    );
-  });
-
-  return <div>{post}</div>;
+function Post({ post }) {
+  return (
+    <div>
+      <h2>{post.title}</h2>
+      <h4>{post.username}</h4>
+      <p>{post.content}</p>
+    </div>
+  );
 }
 
 export default Post;
