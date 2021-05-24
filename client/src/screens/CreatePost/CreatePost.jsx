@@ -38,10 +38,10 @@ const CreatePost = (props) => {
         <h1>This is "Create Post" page!</h1>
         <form className='create-form' onSubmit={handleSubmit}>
         <input
-            className="input-name"
-            placeholder="Name"
-            value={post.name}
-            name='name'
+            className="input-title"
+            placeholder="Title"
+            value={post.title}
+            name='title'
             required
             onChange={handleChange}
           />
