@@ -1,0 +1,20 @@
+.post-container {
+  background-color: white;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px darkgray;
+  margin: 10px;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.title-link:hover {
+  color: rgb(49,61,81);
+}
