@@ -1,0 +1,44 @@
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  background-color: rgb(49,61,81);
+  padding-bottom: 25px;
+}
+
+.logo-div {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.logo {
+  font-family: 'Crimson Text', serif;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 100px;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  padding: 10px 10px 10px 10px;
+  margin-left: 50px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  margin-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.link:hover {
+  color: black;
+}

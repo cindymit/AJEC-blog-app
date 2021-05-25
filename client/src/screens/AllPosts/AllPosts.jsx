@@ -18,8 +18,6 @@ const AllPosts = () => {
   return (
     <Layout>
       <div>
-
-        <h1>This is "All Posts" page!</h1>
         {posts.map((post) => (
           <Post post={post} />
         ))}
