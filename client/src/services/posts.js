@@ -15,9 +15,9 @@ export const getPosts = async () => {
   }
 };
 
-export const getPost = async (id) => {
+export const getPost = async _id => {
   try {
-    const response = await api.get(`/posts/${id}`);
+    const response = await api.get(`/posts/${_id}`);
     const post = response.data;
     return post;
   } catch (error) {

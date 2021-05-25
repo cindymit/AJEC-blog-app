@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 function Post({ post }) {
   return (
     <div>
-      <Link path to= "/post/:id">
+      <Link path to={`/post/${post._id}`}>
         <h2>{post.title}</h2>
         </Link>
       <h4>{post.username}</h4>
