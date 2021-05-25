@@ -12,7 +12,7 @@ function App() {
         <Route exact path="/" component={AllPosts} />
         <Route path="/posts" component={AllPosts} />
         <Route path="/add-post" component={CreatePost} />
-        <Route path="/post/:id" component={PostDetails} />
+        <Route exact path="/post/:id" component={PostDetails} />
         <Route path="/post/:id/edit" component={EditPost} />
 
       </Switch>
