@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router';
-import { useState, useEffec } from 'react'
+import { useState, useEffect } from 'react'
 import { getPost, deletePost } from "../../services/posts"
 import Layout from "../../components/Layout/Layout"
 import "./PostDetails.css"
@@ -29,8 +29,9 @@ const PostDetails = (props) => {
   return (
     <Layout> 
       <div className="post-detail">
-        <div className="title">{ post.title}</div>
-        <div className="content">{ post.content}</div>
+
+        <div className="title">{post.title}</div>
+        <div className="content">{post.content}</div>
         <div className="username">{post.username}</div>
         <button className="edit-button">Edit</button>
         <button className="delete-button">delete</button>
