@@ -1,48 +1,54 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react'
-import { getPost, deletePost } from "../../services/posts"
-import Layout from "../../components/Layout/Layout"
-import "./PostDetails.css"
-
-
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { getPost, deletePost } from "../../services/posts";
+import Layout from "../../components/Layout/Layout";
+import "./PostDetails.css";
 
 const PostDetails = (props) => {
+  const [post, setPost] = useState(null);
+  const [isLoaded, setLoaded] = useState(false);
+  const { id } = useParams();
 
-  const [post, setPost] = useState(null)
-  const [isLoaded, setLoaded] = useState(false)
-  const { id } = useParams()
-  
   useEffect(() => {
     const fetchPost = async () => {
-      const post = await getPost(id)
-      console.log(post)
-      setPost(post)
-      setLoaded(true)
-      
-    }
-    fetchPost()
-  }, [id])
-  
-  
-  if (!isLoaded) {
-    return <h1>Loading...</h1>
+      const post = await getPost(id);
+      console.log(post);
+      setPost(post);
+      setLoaded(true);
+    };
+    fetchPost();
+  }, [id]);
 
-    
+  if (!isLoaded) {
+    return <h1>Loading...</h1>;
   }
 
-
   return (
-    <Layout> 
+    <Layout>
       <div className="post-detail">
-
+        {/* <div className="username">{post.username}</div>
+        <hr></hr>
         <div className="title">{post.title}</div>
-        <div className="content">{post.content}</div>
-        <div className="username">{post.username}</div>
-        <button className="edit-button"><Link className="edit-link" to={`/post/${post._id}/edit`}>Edit</Link></button>
-        <button className="delete-button" onClick={()=>deletePost(post._id)}>delete</button>
+        <hr></hr>
+        <div className="content">{post.content}</div> */}
+        <h4>{post.username}</h4>
+        <hr></hr>
+        <Link path to={`/post/${post._id}`} className="title-link">
+          <h2>{post.title}</h2>
+        </Link>
+        <hr></hr>
+        <p>{post.content}</p>
+        <button className="edit-button">
+          <Link className="edit-link" to={`/post/${post._id}/edit`}>
+            Edit
+          </Link>
+        </button>
+        <button className="delete-button" onClick={() => deletePost(post._id)}>
+          Delete
+        </button>
       </div>
-      </Layout>
+    </Layout>
   );
 };
 

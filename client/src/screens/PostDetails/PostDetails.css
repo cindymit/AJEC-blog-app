@@ -1,0 +1,35 @@
+.post-detail {
+  background-color: white;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px darkgray;
+  margin: 10px;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.edit-button {
+  font-size: 20px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.edit-link {
+  text-decoration: none;
+  color: #808080;
+}
+
+.edit-link:hover {
+  color: black;
+}
+
+.delete-button {
+  font-size: 20px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  color: #808080;
+}
